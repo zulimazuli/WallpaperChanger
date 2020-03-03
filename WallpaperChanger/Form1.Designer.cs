@@ -32,22 +32,21 @@
             this.regValueData = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.regValueName = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.regKeyName = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.openRegEdit = new MaterialSkin.Controls.MaterialRaisedButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.termsCheckbox = new MaterialSkin.Controls.MaterialCheckBox();
+            this.openRegEdit = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // submitButton
             // 
-            this.submitButton.AutoSize = true;
             this.submitButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.submitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submitButton.Depth = 0;
             this.submitButton.Icon = null;
-            this.submitButton.Location = new System.Drawing.Point(565, 231);
+            this.submitButton.Location = new System.Drawing.Point(318, 301);
             this.submitButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.submitButton.Name = "submitButton";
             this.submitButton.Primary = true;
@@ -110,32 +109,13 @@
             this.regKeyName.TabStop = false;
             this.regKeyName.UseSystemPasswordChar = false;
             // 
-            // openRegEdit
-            // 
-            this.openRegEdit.AutoSize = true;
-            this.openRegEdit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.openRegEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.openRegEdit.Depth = 0;
-            this.openRegEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.openRegEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.openRegEdit.Icon = null;
-            this.openRegEdit.Location = new System.Drawing.Point(561, 297);
-            this.openRegEdit.MouseState = MaterialSkin.MouseState.HOVER;
-            this.openRegEdit.Name = "openRegEdit";
-            this.openRegEdit.Primary = true;
-            this.openRegEdit.Size = new System.Drawing.Size(174, 36);
-            this.openRegEdit.TabIndex = 5;
-            this.openRegEdit.Text = "Open Registry Editor";
-            this.openRegEdit.UseVisualStyleBackColor = true;
-            this.openRegEdit.Click += new System.EventHandler(this.openRegEdit_Click);
-            // 
             // materialLabel1
             // 
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(8, 95);
+            this.materialLabel1.Location = new System.Drawing.Point(8, 91);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(91, 19);
@@ -148,7 +128,7 @@
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(8, 124);
+            this.materialLabel2.Location = new System.Drawing.Point(8, 120);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(91, 19);
@@ -161,34 +141,57 @@
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(17, 180);
+            this.materialLabel3.Location = new System.Drawing.Point(17, 176);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(82, 19);
             this.materialLabel3.TabIndex = 8;
             this.materialLabel3.Text = "Value Data";
             // 
-            // materialDivider1
+            // termsCheckbox
             // 
-            this.materialDivider1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialDivider1.Depth = 0;
-            this.materialDivider1.Location = new System.Drawing.Point(12, 158);
-            this.materialDivider1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialDivider1.Name = "materialDivider1";
-            this.materialDivider1.Size = new System.Drawing.Size(722, 2);
-            this.materialDivider1.TabIndex = 9;
-            this.materialDivider1.Text = "materialDivider1";
+            this.termsCheckbox.AutoSize = true;
+            this.termsCheckbox.Depth = 0;
+            this.termsCheckbox.Font = new System.Drawing.Font("Roboto", 10F);
+            this.termsCheckbox.Location = new System.Drawing.Point(86, 305);
+            this.termsCheckbox.Margin = new System.Windows.Forms.Padding(0);
+            this.termsCheckbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.termsCheckbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.termsCheckbox.Name = "termsCheckbox";
+            this.termsCheckbox.Ripple = true;
+            this.termsCheckbox.Size = new System.Drawing.Size(175, 30);
+            this.termsCheckbox.TabIndex = 10;
+            this.termsCheckbox.Text = "I know what I am doing.";
+            this.termsCheckbox.UseVisualStyleBackColor = true;
+            this.termsCheckbox.Click += new System.EventHandler(this.termsCheckbox_Click);
+            // 
+            // openRegEdit
+            // 
+            this.openRegEdit.AutoSize = true;
+            this.openRegEdit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.openRegEdit.Depth = 0;
+            this.openRegEdit.Icon = null;
+            this.openRegEdit.Location = new System.Drawing.Point(560, 301);
+            this.openRegEdit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.openRegEdit.MouseState = MaterialSkin.MouseState.HOVER;
+            this.openRegEdit.Name = "openRegEdit";
+            this.openRegEdit.Primary = false;
+            this.openRegEdit.Size = new System.Drawing.Size(174, 36);
+            this.openRegEdit.TabIndex = 11;
+            this.openRegEdit.Text = "Open Registry Editor";
+            this.openRegEdit.UseVisualStyleBackColor = true;
+            this.openRegEdit.Click += new System.EventHandler(this.openRegEdit_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 367);
-            this.Controls.Add(this.materialDivider1);
+            this.Controls.Add(this.openRegEdit);
+            this.Controls.Add(this.termsCheckbox);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.openRegEdit);
             this.Controls.Add(this.regKeyName);
             this.Controls.Add(this.regValueName);
             this.Controls.Add(this.regValueData);
@@ -205,12 +208,12 @@
         private MaterialSkin.Controls.MaterialSingleLineTextField regValueData;
         private MaterialSkin.Controls.MaterialSingleLineTextField regValueName;
         private MaterialSkin.Controls.MaterialSingleLineTextField regKeyName;
-        private MaterialSkin.Controls.MaterialRaisedButton openRegEdit;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialDivider materialDivider1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private MaterialSkin.Controls.MaterialCheckBox termsCheckbox;
+        private MaterialSkin.Controls.MaterialFlatButton openRegEdit;
     }
 }
 
